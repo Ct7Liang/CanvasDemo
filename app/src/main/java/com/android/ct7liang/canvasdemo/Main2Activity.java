@@ -10,6 +10,8 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//        https://www.cnblogs.com/tianzhijiexian/p/4297664.html
+
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_main2);
