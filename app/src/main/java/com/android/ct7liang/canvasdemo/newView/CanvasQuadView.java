@@ -53,6 +53,8 @@ public class CanvasQuadView extends View {
 //        path3.addPath();
 //        path3.addRect();
 //        path3.addRoundRect();
+
+
     }
 
     public CanvasQuadView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -71,5 +73,9 @@ public class CanvasQuadView extends View {
 
 
         canvas.drawPath(path3, paint);
+
+
+        //在路径上绘制文字
+//        canvas.drawTextOnPath();
     }
 }
