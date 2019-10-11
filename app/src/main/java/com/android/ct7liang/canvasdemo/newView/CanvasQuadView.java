@@ -13,6 +13,7 @@ public class CanvasQuadView extends View {
     private Paint paint;
     private Path path1;
     private Path path2;
+    private Path path3;
 
     public CanvasQuadView(Context context) {
         super(context);
@@ -35,12 +36,23 @@ public class CanvasQuadView extends View {
         path1.moveTo(600, 600);
         path1.lineTo(800, 800);
 
-
         path2 = new Path();
         path2.lineTo(200, 200);
         path2.setLastPoint(300, 400);
         path2.lineTo(600, 600);
+        path2.addCircle(600, 600, 200, Path.Direction.CW);
 
+        path2.close();
+
+        path3 = new Path();
+        path3.addCircle(500, 800, 400, Path.Direction.CCW);
+
+//        path3.addCircle();
+//        path3.addArc();
+//        path3.addOval();
+//        path3.addPath();
+//        path3.addRect();
+//        path3.addRoundRect();
     }
 
     public CanvasQuadView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -56,5 +68,8 @@ public class CanvasQuadView extends View {
         paint.setStrokeWidth(5f);
 
         canvas.drawPath(path2, paint);
+
+
+        canvas.drawPath(path3, paint);
     }
 }
