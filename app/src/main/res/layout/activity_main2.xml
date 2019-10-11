@@ -8,10 +8,26 @@
     tools:context=".Main2Activity"
     android:background="#CCCCCC">
 
-    <com.android.ct7liang.canvasdemo.newView.CanvasView
-        android:layout_centerInParent="true"
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasTextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasView-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="450dp"-->
+        <!--android:background="#FFFFFF"/>-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasArcView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasOvalView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <com.android.ct7liang.canvasdemo.newView.CanvasQuadView
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:background="#FFFFFF"/>
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
