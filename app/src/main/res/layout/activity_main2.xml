@@ -34,9 +34,9 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
-    <com.android.ct7liang.canvasdemo.newView.CanvasPictureView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasPictureView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
 
     <!--<com.android.ct7liang.canvasdemo.flagdemo.StarView-->
@@ -45,5 +45,10 @@
         <!--android:layout_marginTop="50dp"-->
         <!--android:layout_marginLeft="50dp"-->
         <!--android:layout_marginRight="50dp"/>-->
+
+    <com.android.ct7liang.canvasdemo.newView.SignView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"/>
 
 </RelativeLayout>
