@@ -47,17 +47,33 @@ public class SignView extends View {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
                 Log.i("ct7liang123", "down");
-                path.moveTo(event.getX(), event.getY());
+//                path.moveTo(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.i("ct7liang123", "move");
-                path.lineTo(event.getX(), event.getY());
+                int historySize = event.getHistorySize();
+                Log.i("ct7liang123", "move: " + historySize);
+                for (int i = 0; i < historySize; i++) {
+                    float historicalX = event.getHistoricalX(i);
+                    float historicalY = event.getHistoricalY(i);
+                    path.lineTo(historicalX, historicalY);
+                }
+//                path.lineTo(event.getX(), event.getY());
                 break;
             case MotionEvent.ACTION_UP:
-                Log.i("ct7liang123", "up");
+//                int historySize = event.getHistorySize();
+                Log.i("ct7liang123", "up: ");
+//                for (int i = 0; i < historySize; i++) {
+//                    float historicalX = event.getHistoricalX(i);
+//                    float historicalY = event.getHistoricalY(i);
+//                    path.lineTo(historicalX, historicalY);
+//                }
                 break;
         }
         invalidate();
         return true;
+    }
+
+    private void clear(Canvas canvas){
+
     }
 }
