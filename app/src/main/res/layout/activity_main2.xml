@@ -26,8 +26,24 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
-    <com.android.ct7liang.canvasdemo.newView.CanvasQuadView
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasQuadView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasBitmapView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <com.android.ct7liang.canvasdemo.newView.CanvasPictureView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
+    <!--<com.android.ct7liang.canvasdemo.flagdemo.StarView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"/>-->
 
 </RelativeLayout>

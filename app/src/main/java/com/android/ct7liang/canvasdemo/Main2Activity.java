@@ -2,6 +2,7 @@ package com.android.ct7liang.canvasdemo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 
 public class Main2Activity extends AppCompatActivity {
