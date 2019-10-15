@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+    <com.android.ct7liang.canvasdemo.newView.SignView01
+        android:id="@+id/sign_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <View
+            android:id="@+id/view_b"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#000000"/>
+        <View
+            android:id="@+id/view_r"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#FF0000"/>
+        <View
+            android:id="@+id/view_g"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#00FF00"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:text="clear"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>

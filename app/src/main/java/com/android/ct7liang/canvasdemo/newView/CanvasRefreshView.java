@@ -5,37 +5,39 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class CanvasQuadView extends View {
+public class CanvasRefreshView extends View {
 
     private Paint paint;
     private Path path;
-    private float px;
-    private float py;
+    private Rect rectF;
 
-    public CanvasQuadView(Context context) {
+    public CanvasRefreshView(Context context) {
         super(context);
     }
 
-    public CanvasQuadView(Context context, AttributeSet attrs) {
+    public CanvasRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
+        //注意:关闭硬件加速器
+        setLayerType(LAYER_TYPE_SOFTWARE, null);
+
         paint = new Paint();
-        paint.setAntiAlias(true);
-        paint.setStrokeWidth(3);
-        paint.setColor(Color.RED);
+        paint.setStrokeWidth(5);
+        paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
 
         path = new Path();
 
+        rectF = new Rect(0, 0, 300, 300);
     }
 
-    public CanvasQuadView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CanvasRefreshView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -43,22 +45,7 @@ public class CanvasQuadView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        int width = getWidth();
-
-        int height = getHeight();
-
-        path.reset();
-
-        path.moveTo(width/4, height/2);
-
-        if (px == 0 && py == 0){
-            canvas.drawPoint(width/4, height/2, paint);
-            canvas.drawPoint(width/4*3, height/2, paint);
-        }
-
-        if (px!=0 && py!=0){
-            path.quadTo(px, py, width/4*3, height/2);
-        }
+        canvas.drawRect(rectF, paint);
 
         canvas.drawPath(path, paint);
     }
@@ -67,16 +54,17 @@ public class CanvasQuadView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
+                path.moveTo(event.getX(), event.getY());
+                invalidate(rectF);
+                break;
             case MotionEvent.ACTION_MOVE:
-                px = event.getX();
-                py = event.getY();
-                invalidate();
+                path.lineTo(event.getX(), event.getY());
+                invalidate(rectF);
                 break;
             case MotionEvent.ACTION_UP:
+
                 break;
         }
         return true;
     }
-
-
 }

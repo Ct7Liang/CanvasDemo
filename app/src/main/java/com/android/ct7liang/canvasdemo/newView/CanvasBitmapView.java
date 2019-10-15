@@ -45,6 +45,9 @@ public class CanvasBitmapView extends View {
         //确定图片的左上角, 画出图片, 图片按照实际大小展示, 超出屏幕部分的图片不会显示
         canvas.drawBitmap(bitmap, 0, 0, paint);
 
+
+
+
 //        //指定显示图片的哪一部分区域
 //        Rect rectFSrc = new Rect(bitmap.getWidth()/3, bitmap.getHeight()/3, bitmap.getWidth()/3*2, bitmap.getHeight()/3*2);
 //        //指定在屏幕的那一部分区域显示

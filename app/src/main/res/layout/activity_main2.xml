@@ -26,10 +26,6 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
-    <!--<com.android.ct7liang.canvasdemo.newView.CanvasQuadView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" />-->
-
     <!--<com.android.ct7liang.canvasdemo.newView.CanvasBitmapView-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
@@ -46,9 +42,53 @@
         <!--android:layout_marginLeft="50dp"-->
         <!--android:layout_marginRight="50dp"/>-->
 
-    <com.android.ct7liang.canvasdemo.newView.SignView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"/>
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <com.android.ct7liang.canvasdemo.newView.SignView
+            android:id="@+id/view_sign"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:text="清空"
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="保存"
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasQuadView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.QuadView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <!--<com.android.ct7liang.canvasdemo.newView.CanvasRefreshView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#FFFFFF"/>-->
 
 </RelativeLayout>
