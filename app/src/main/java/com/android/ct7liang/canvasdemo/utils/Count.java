@@ -1,6 +1,7 @@
 package com.android.ct7liang.canvasdemo.utils;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.Log;
@@ -111,27 +112,39 @@ public class Count {
 
     private static Point[] controls = new Point[4];
 
-
+//    static Paint p;
 
     public static void drawPathByNewPoint(float x, float y, ArrayList<Point> list, Canvas canvas, Paint paint){
+
+//        if (p == null){
+//            p = new Paint();
+//            p.setColor(Color.RED);
+//            p.setStrokeWidth(13);
+//            p.setStyle(Paint.Style.FILL);
+//        }
+
         Path path = new Path();
         list.add(new Point(x, y));
+
+//        canvas.drawPoint(x, y, p);
+
         countControls(list);
         int size = list.size();
-//        Log.i("ct7liang123 size: ", "" + size);
         if (size == 3){
             path.moveTo(list.get(0).x, list.get(0).y);
             path.quadTo(controls[2].x, controls[2].y, list.get(1).x, list.get(1).y);
+            canvas.drawPath(path, paint);
+//            Log.i("ct7liang123", "bitmapCanvasDraw : size=" + size);
         }else if (size > 3){
             path.moveTo(list.get(size-3).x, list.get(size-3).y);
             path.cubicTo(
                     controls[1].x, controls[1].y,
                     controls[2].x, controls[2].y,
-                    list.get(size-1).x, list.get(size-1).y
+                    list.get(size-2).x, list.get(size-2).y
             );
             canvas.drawPath(path, paint);
+//            Log.i("ct7liang123", "bitmapCanvasDraw : size=" + size);
         }
-
     }
 
     public static void drawPathByNewPoint(float x, float y, ArrayList<Point> list, Path path){
@@ -171,6 +184,13 @@ public class Count {
 
         controls[2] = c1;
         controls[3] = c2;
+
+//        try {
+//            Log.i("ct7liang123", controls[0].toString()+" "+controls[1].toString()+" "+controls[2].toString()+" "+controls[3].toString());
+//        }catch (Exception e){
+//            Log.i("ct7liang123", null+" "+null+" "+controls[2].toString()+" "+controls[3].toString());
+//        }
+
     }
 
 }
