@@ -51,6 +51,7 @@ public class SignView extends View {
         path = new Path();
     }
 
+
     public SignView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
