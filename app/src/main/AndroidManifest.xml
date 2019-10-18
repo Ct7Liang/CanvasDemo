@@ -27,4 +27,6 @@
         <activity android:name=".Main3Activity"></activity>
     </application>
 
+    <!--https://blog.csdn.net/harvic880925/article/details/38926877-->
+
 </manifest>
