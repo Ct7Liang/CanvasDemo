@@ -24,7 +24,7 @@
         <activity android:name=".activity.View02Activity" />
         <activity android:name=".activity.View03Activity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".Main3Activity" />
     </application>
 
     <!--https://blog.csdn.net/harvic880925/article/details/38926877-->

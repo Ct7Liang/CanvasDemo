@@ -41,8 +41,13 @@ public class TextPaintView1 extends View {
         Path path = new Path();
         path.moveTo(0,500);
         path.lineTo(500, 750);
+
         canvas.drawPath(path, paint);
 
         canvas.drawText("AndroidDeveloper", 100, 300, paint);
+
+
+        path.moveTo(500, 700); //绝对位置
+        path.rMoveTo(500, 700); //相对位置
     }
 }
