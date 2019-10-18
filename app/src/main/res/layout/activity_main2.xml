@@ -56,11 +56,13 @@
         <!--android:layout_height="match_parent"-->
         <!--android:background="#FFFFFF"/>-->
 
-
-
-    <!--paint-->
-    <com.android.ct7liang.canvasdemo.paint.PaintView
+    <com.android.ct7liang.canvasdemo.paint.PaintView1
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
+    <!--<com.android.ct7liang.canvasdemo.paint.TextPaintView1-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
 </RelativeLayout>
