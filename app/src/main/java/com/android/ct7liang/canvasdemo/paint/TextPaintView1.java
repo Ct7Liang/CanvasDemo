@@ -5,6 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.RectF;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -21,8 +24,9 @@ public class TextPaintView1 extends View {
 
         paint = new Paint();
 
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(5);
+//        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setStrokeWidth(8);
         paint.setColor(Color.BLACK);
         paint.setAntiAlias(true);
         paint.setTextSize(120);
@@ -30,24 +34,28 @@ public class TextPaintView1 extends View {
 //        paint.setStrokeJoin(Paint.Join.ROUND);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
         canvas.drawColor(Color.WHITE);
 
-        paint.setShadowLayer(25, 50, 50, Color.GRAY);
-
         Path path = new Path();
-        path.moveTo(0,500);
-        path.lineTo(500, 750);
+
+        path.addCircle(400, 400, 250, Path.Direction.CCW);
+        path.addCircle(600, 400, 250, Path.Direction.CCW);
+//        path.setFillType(Path.FillType.EVEN_ODD); //重叠区域无填充
+//        path.setFillType(Path.FillType.INVERSE_EVEN_ODD); //重叠区域填充
+//        path.setFillType(Path.FillType.WINDING); //全部填充
+        path.setFillType(Path.FillType.INVERSE_WINDING); //全部无填充
+
 
         canvas.drawPath(path, paint);
 
-        canvas.drawText("AndroidDeveloper", 100, 300, paint);
+//        path3.reset();
 
-
-        path.moveTo(500, 700); //绝对位置
-        path.rMoveTo(500, 700); //相对位置
+//        path3.rewind();
+//
     }
 }
