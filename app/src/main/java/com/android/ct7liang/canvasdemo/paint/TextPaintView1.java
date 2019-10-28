@@ -48,10 +48,14 @@ public class TextPaintView1 extends View {
 //        path.setFillType(Path.FillType.EVEN_ODD); //重叠区域无填充
 //        path.setFillType(Path.FillType.INVERSE_EVEN_ODD); //重叠区域填充
 //        path.setFillType(Path.FillType.WINDING); //全部填充
-        path.setFillType(Path.FillType.INVERSE_WINDING); //全部无填充
+//        path.setFillType(Path.FillType.INVERSE_WINDING); //全部无填充
 
 
         canvas.drawPath(path, paint);
+
+        canvas.drawLine(100, 100, 700, 700, paint);
+
+
 
 //        path3.reset();
 

@@ -80,6 +80,9 @@ public class CanvasView extends View {
         Log.i("ct7liang123", "width: " + paint.measureText(s));
 
 
+
+
+
 //        //画矩形
 //        paint.setStrokeWidth(8); //设置矩形边界的宽度
 //
@@ -144,5 +147,11 @@ public class CanvasView extends View {
 //        //第二个参数(offset)表示偏移值, 第三个参数(count)代表读取的值的数量
 //        canvas.drawPoints(points2, 2, 10, paint);
 
+
+        canvas.drawPaint(paint);
+
+
+        // TODO: 2019-10-21
+//        paint.setShader();
     }
 }
