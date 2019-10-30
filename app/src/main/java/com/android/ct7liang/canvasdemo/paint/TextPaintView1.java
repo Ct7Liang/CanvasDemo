@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.RectF;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
@@ -32,6 +31,9 @@ public class TextPaintView1 extends View {
         paint.setTextSize(120);
 
 //        paint.setStrokeJoin(Paint.Join.ROUND);
+
+        
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
